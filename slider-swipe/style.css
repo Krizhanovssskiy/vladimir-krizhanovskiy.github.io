@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+
+li {
+    list-style: none;
+}
+
+
+.slider-conteiner {
+    width: 1200px;
+    height: 450px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.slider-controll {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.content {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    transition: transform 1.5s, opacity 1s;
+    /* transition-delay: 0.5s; */
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+
+.react .content {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition-delay: 0.5s
+}
+
+.react img {
+    pointer-events: none;
+    transform: scale(1.04);
+}
+
+
+.slider {
+    display: flex;
+    height: 100%;
+    width: 100vw;
+    position: relative;
+    /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
+    user-select: none;
+    /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+    touch-action: pan-y;
+}
+
+.slider li {
+    transform: translateX(100%);
+
+    will-change: transform;
+    position: absolute;
+    left: 0;
+    /* width: 100vw; */
+    z-index: 0;
+    height: 100%;
+    top: 0;
+}
+
+.slider li img {
+    poiner-events: none;
+}
+
+.react {
+    transition: transform 1s ease;
+}
+
+.slider li.visible {
+    transform: translateX(0%);
+}
+
+.slider li:first-child {
+    transform: translateX(0%);
+}
+
+.slider img {
+    height: 100%;
+    width: 1200px;
+    transition: 4s;
+    transition-delay: 1s;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-dots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 1000;
+    align-items: flex-end;
+    flex-direction: column;
+
+}
+
+.slider-dots span {
+    background-color: red;
+    width: 35px;
+    transition: .5s;
+    margin-bottom: 10px;
+    height: 10px;
+
+}
+
+.slider-dots span.active {
+    width: 100px;
+}
+
+.slider-controll button {
+    background-color: #000;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+
+.active {
+    z-index: 2 !important;
+}

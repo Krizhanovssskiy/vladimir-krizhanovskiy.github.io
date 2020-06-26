@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер - Kadorr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="slider-controll">
+    <button id="button_prev">Назад</button>
+    <button id="button_next">Вперед</button>
+    <div id="slider-count" class="slider-count">1 / 5</div>
+</div>
+<div class="slider-conteiner">
+    <ul class="slider" id="slider">
+        <li>
+            <img src="./img/1.jpg" alt="">
+            <div class="content">
+                <p>Загололовок 1</p>
+            </div>
+        </li>
+        <li>
+            <img src="./img/2.jpg" alt="">
+            <div class="content">
+                <p>Загололовок 2</p>
+            </div>
+        </li>
+        <li>
+            <img src="./img/3.jpg" alt="">
+            <div class="content">
+                <p>Загололовок 3</p>
+            </div>
+        </li>
+        <li>
+            <img src="./img/4.jpg" alt="">
+            <div class="content">
+                <p>Загололовок 4</p>
+            </div>
+        </li>
+        <li>
+            <img src="./img/5.jpg" alt="">
+            <div class="content">
+                <p>Загололовок 5</p>
+            </div>
+        </li>
+    </ul>
+    <div id="slider-dots" class="slider-dots">
+        <span data-index="0"></span>
+        <span data-index="1"></span>
+        <span data-index="2"></span>
+        <span data-index="3"></span>
+        <span data-index="4"></span>
+    </div>
+</div>
+
+<script src="./main.js"></script>
+</body>
+
+</html>

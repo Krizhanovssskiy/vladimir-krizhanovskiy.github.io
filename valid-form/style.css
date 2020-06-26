@@ -1,0 +1,49 @@
+
+.form-valid-box {
+    position: relative;
+    width: 100%;
+}
+
+.form-valid-box input,
+.form-valid-box select,
+.form-valid-box textarea {
+    box-sizing: border-box;
+    width: 350px;
+    outline: none;
+    border: 2px solid cadetblue;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+.form-valid-box input[type="checkbox"] {
+    width: auto;
+}
+.form-valid-box button {
+    padding: 10px 15px;
+    background: lightgrey;
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+    color: grey;
+    cursor: pointer;
+}
+
+.form-valid-box .invalid, .invalid:active {
+    border-color: lightcoral;
+    background: lightcoral;
+    outline: none;
+}
+.form-valid-box.form-invalid input, .form-valid-box.form-invalid select {
+    border-color: lightcoral;
+    outline: none;
+}
+
+.form-valid-box .error-mssg-box {
+    position: relative;
+    width: 100%;
+}
+
+.form-valid-box .error-mssg-box .error-mssg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
